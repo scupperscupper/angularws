@@ -1,0 +1,47 @@
+<h1>Registration</h1>
+<form #registrationForm (ngSubmit)="register()" [formGroup]="controls"
+	novalidate class="form">
+	<table class="full-width" cellspacing="0">
+		<tr>
+			<td><mat-input-container>
+				<input formControlName="firstName"
+					[(ngModel)]="registrationModel.firstName" placeholder="First Name"
+					type="text" matInput required /></mat-input-container></td>
+			<td><mat-input-container class="example-full-width">
+				<input formControlName="lastName"
+					[(ngModel)]="registrationModel.lastName" placeholder="Last Name"
+					type="text" matInput required /></mat-input-container></td>
+		</tr>
+		<tr>
+			<mat-form-field>
+  				<input matInput formControlName="birthDate" [matDatepicker]="datePicker" placeholder="Birthday" [(ngModel)]="registrationModel.birthDate" required>
+  				<mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
+  				<mat-datepicker #datePicker></mat-datepicker>
+			</mat-form-field>
+		</tr>
+		<tr>
+			<td><mat-input-container>
+				<input formControlName="city" [(ngModel)]="registrationModel.city"
+					placeholder="City" type="text" matInput /></mat-input-container></td>
+			<td><mat-input-container class="example-full-width">
+				<input formControlName="country"
+					[(ngModel)]="registrationModel.country" placeholder="Country"
+					type="text" matInput required /> </mat-input-container></td>
+		</tr>
+		<tr>
+			<mat-input-container>
+			<input formControlName="email" [(ngModel)]="registrationModel.email"
+				placeholder="Email" type="text" matInput required /> </mat-input-container>
+		</tr>
+		<tr>
+			<mat-input-container>
+			<input formControlName="phoneNumber"
+				[(ngModel)]="registrationModel.phoneNumber"
+				placeholder="Phone Number" type="text" matInput required /></mat-input-container>
+		</tr>
+		<tr>
+			<button name="Registration" type="submit">Register</button>
+		</tr>
+	</table>
+</form>
+

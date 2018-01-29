@@ -1,0 +1,21 @@
+<mat-toolbar>
+
+	<button mat-menu-item routerLink="/index">Animal index</button>
+	<button mat-menu-item [matMenuTriggerFor]="vertebrates">Vertebrates</button>
+	<button mat-menu-item [matMenuTriggerFor]="invertebrates">Invertebrates</button>
+	
+	<mat-menu #vertebrates="matMenu">
+	  <button mat-menu-item routerLink="/vertebrates/birds">Birds</button>
+	  <button mat-menu-item routerLink="/vertebrates/mamals">Mammals</button>
+	</mat-menu>
+	
+	<mat-menu #invertebrates="matMenu">
+	  <button mat-menu-item routerLink="/invertebrates/insects">Insects</button>
+	</mat-menu>
+	<mat-toolbar>
+	<button mat-menu-item routerLink="/login">Login</button>
+	<button mat-menu-item routerLink="/register">Register</button>
+</mat-toolbar>
+</mat-toolbar>
+
+
