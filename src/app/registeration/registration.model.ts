@@ -5,14 +5,15 @@ export class RegistrationFormModel {
 
   public static firstNameControl = new FormControl('', Validators.required);
   public static lastNameControl = new FormControl('', Validators.required);
-  public static birthDateControl = new FormControl('', [Validators.required]);
+  public static birthDateControl = new FormControl('', [Validators.required, RegistrationFormModel.birthYearValidator]);
   public static countryControl = new FormControl('', Validators.required);
   public static cityControl = new FormControl('', Validators.required);
   public static emailControl = new FormControl('', [Validators.required, Validators.email]);
   public static phoneNumberControl = new FormControl('', [Validators.required, RegistrationFormModel.telephoneNumberValidator]);
 
   static birthYearValidator(c: FormControl): ValidationErrors {
-    const numValue = Number(c.value);
+    const serializedDate = new Date(c.value);
+    const numValue = serializedDate.getFullYear();
     const currentYear = new Date().getFullYear();
     const minYear = currentYear - 85;
     const maxYear = currentYear - 18;
