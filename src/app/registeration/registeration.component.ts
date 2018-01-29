@@ -12,7 +12,7 @@ export class RegisterationComponent implements OnInit {
 
   public registrationModel: RegistrationModel;
   public controls: FormGroup;
-
+// serializedDate = new FormControl((new Date()).toISOString());
   constructor() {}
 
   ngOnInit() {

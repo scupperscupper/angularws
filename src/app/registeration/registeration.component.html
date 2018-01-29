@@ -3,8 +3,8 @@
 	novalidate class="form">
 	<table class="full-width" cellspacing="0">
 		<tr>
-			<td><mat-input-container>
-				<input formControlName="firstName"
+			<td><mat-input-container> <input
+					formControlName="firstName"
 					[(ngModel)]="registrationModel.firstName" placeholder="First Name"
 					type="text" matInput required /></mat-input-container></td>
 			<td><mat-input-container class="example-full-width">
@@ -13,15 +13,16 @@
 					type="text" matInput required /></mat-input-container></td>
 		</tr>
 		<tr>
-			<mat-form-field>
-  				<input matInput formControlName="birthDate" [matDatepicker]="datePicker" placeholder="Birthday" [(ngModel)]="registrationModel.birthDate" required>
-  				<mat-datepicker-toggle matSuffix [for]="datePicker"></mat-datepicker-toggle>
-  				<mat-datepicker #datePicker></mat-datepicker>
-			</mat-form-field>
+			<mat-form-field> <input matInput
+				formControlName="birthDate" [matDatepicker]="datePicker"
+				placeholder="Birthday" [(ngModel)]="registrationModel.birthDate"
+				required> <mat-datepicker-toggle matSuffix
+				[for]="datePicker"></mat-datepicker-toggle> <mat-datepicker
+				#datePicker></mat-datepicker> </mat-form-field>
 		</tr>
 		<tr>
-			<td><mat-input-container>
-				<input formControlName="city" [(ngModel)]="registrationModel.city"
+			<td><mat-input-container> <input
+					formControlName="city" [(ngModel)]="registrationModel.city"
 					placeholder="City" type="text" matInput /></mat-input-container></td>
 			<td><mat-input-container class="example-full-width">
 				<input formControlName="country"
@@ -29,13 +30,13 @@
 					type="text" matInput required /> </mat-input-container></td>
 		</tr>
 		<tr>
-			<mat-input-container>
-			<input formControlName="email" [(ngModel)]="registrationModel.email"
+			<mat-input-container> <input
+				formControlName="email" [(ngModel)]="registrationModel.email"
 				placeholder="Email" type="text" matInput required /> </mat-input-container>
 		</tr>
 		<tr>
-			<mat-input-container>
-			<input formControlName="phoneNumber"
+			<mat-input-container> <input
+				formControlName="phoneNumber"
 				[(ngModel)]="registrationModel.phoneNumber"
 				placeholder="Phone Number" type="text" matInput required /></mat-input-container>
 		</tr>
